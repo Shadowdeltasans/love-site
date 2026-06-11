@@ -57,14 +57,6 @@ body {
   100% { transform: rotate(0deg); left: -12%; }
 }
 
-/* // HEART CODE */
-.altheart {
-  background: url('http://static.indigoimages.ca/2016/shop/113439_img25_twotoneheart.png') no-repeat center;
-  width: 24px;
-  height: 21px;
-  position: relative;
-  display: block;
-}
 
 .heart {
     position: absolute;
