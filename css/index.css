@@ -82,7 +82,7 @@ body {
 /* #endregion */
 button {
     z-index: 10;
-    border-radius: 250%;
+    border-radius: 50px;
     background-color: red;
     border: none;
     color: white;
@@ -90,6 +90,10 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 4vw;
     cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(204, 32, 34, 0.8);
+    font-family: 'Playfair Display', serif;
 }
