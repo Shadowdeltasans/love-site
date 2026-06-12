@@ -18,14 +18,14 @@ body {
 #typewriter-text {
     font-family: 'Playfair Display', serif;
     font-size: 3vw;
-    color: white;
+    color: #de373a;
     line-height: 2;
 }
 
 #cursor {
     font-family: 'Playfair Display', serif;
     font-size: 3vw;
-    color: white;
+    color: #de373a;
     animation: blink 1s infinite;
 }
 
@@ -38,7 +38,7 @@ body {
     margin-top: 40px;
     z-index: 10;
     border-radius: 50px;
-    background-color: red;
+    background-color: #de373a;
     border: none;
     color: white;
     padding: 15px 32px;
