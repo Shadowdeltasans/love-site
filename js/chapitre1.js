@@ -1,9 +1,10 @@
 // Tableau de tes phrases
 const phrases = [
-"I love you like I've never loved anyone before",
+"I love you like I've never loved anyone before.",
 "I love you so much that every second is painful because I'm far from you.",
 "I love you so much that where I used to have nightmares, you've transformed them into peace.",
-"I love you so much that now no dream could ever be as good or as beautiful as the life we ​​could build together."
+"I love you so much that now no dream could ever be as good or as beautiful as the life we could build together.",
+"I love you so much that tomorrow no longer scares me."
 ];
 
 // On démarre à la phrase 0 et à la lettre 0
