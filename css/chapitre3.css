@@ -1,0 +1,122 @@
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Playfair Display', serif;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#intro {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.4em;
+}
+
+#subtitle {
+    color: #cc2022;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Grille de cartes */
+#cards-grid {
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Conteneur de chaque carte */
+.card {
+    width: 140px;
+    height: 180px;
+    cursor: pointer;
+    /* perspective donne l'effet 3D au retournement */
+    perspective: 1000px;
+}
+
+/* L'élément qui se retourne réellement */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /* transition du retournement */
+    transition: transform 0.6s ease;
+    /* permet de voir les deux faces */
+    transform-style: preserve-3d;
+}
+
+/* Quand la carte a la classe "flipped" — elle se retourne */
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Styles communs aux deux faces */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    /* cache la face quand elle est de dos */
+    backface-visibility: hidden;
+}
+
+/* Face avant — fond rouge sombre avec ? */
+.card-front {
+    background-color: #1a0000;
+    border: 2px solid #cc2022;
+    color: #cc2022;
+    font-size: 3em;
+}
+
+/* Face arrière — fond rouge avec le compliment */
+.card-back {
+    background-color: #cc2022;
+    color: white;
+    font-size: 0.85em;
+    line-height: 1.5;
+    /* cachée par défaut, retournée de 180deg */
+    transform: rotateY(180deg);
+}
+
+#final-message {
+    display: none;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.3em;
+}
+
+#final-message button {
+    margin-top: 15px;
+    background-color: #cc2022;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(204, 32, 34, 0.8);
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    #cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

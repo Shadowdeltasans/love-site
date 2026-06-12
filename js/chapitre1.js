@@ -30,7 +30,7 @@ function typeWriter() {
             letterIndex++;
 
             // On rappelle la fonction après 100ms (vitesse de frappe)
-            setTimeout(typeWriter, 100);
+            setTimeout(typeWriter, 50);
 
         } else {
             // La phrase est finie — on passe à la suivante

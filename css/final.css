@@ -1,0 +1,57 @@
+body {
+    background-color: #000;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#main-message {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+#title {
+    color: white;
+    font-size: 2em;
+    margin: 0;
+}
+
+#subtitle {
+    color: #cc2022;
+    font-size: 3em;
+    margin: 10px 0;
+    text-shadow: 0 0 30px rgba(204, 32, 34, 0.8);
+}
+
+#hint {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85em;
+    font-style: italic;
+    margin-top: 20px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+/* Chaque mot qui apparaît */
+#words-container span {
+    position: fixed;
+    font-family: 'Playfair Display', serif;
+    animation: popIn 0.4s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes popIn {
+    0%   { opacity: 0; transform: scale(0); }
+    60%  { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
