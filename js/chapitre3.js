@@ -6,11 +6,12 @@ const compliments = [
     "Your kindness is like your soul unique and beautiful.",
     "You make everything better just by being there.",
     "Every moment by your side makes time fly; the nights spent talking to you are my favorite moments..",
-    "You are more beautiful than you'll ever know.",
+    "Every time I see a picture of you, I find you more and more beautiful.",
     "I want to dedicate my whole life to you, just to make you happy..",
     "You have a heart unlike anyone else.",
     "Every moment with you is a gift."
 ];
+
 
 // On récupère la grille
 const grid = document.getElementById("cards-grid");
