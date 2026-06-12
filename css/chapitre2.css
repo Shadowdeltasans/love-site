@@ -78,3 +78,12 @@ body {
     box-shadow: 0 0 20px rgba(204, 32, 34, 0.8);
     letter-spacing: 2px;
 }
+/* Lueur quand le coeur est complet */
+.heart-glow span {
+    animation: glowPulse 1.5s ease-in-out infinite !important;
+}
+
+@keyframes glowPulse {
+    0%, 100% { text-shadow: none; }
+    50%       { text-shadow: 0 0 8px currentColor; }
+}

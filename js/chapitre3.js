@@ -58,9 +58,28 @@ compliments.forEach(function(text) {
         // Si toutes les cartes sont retournées, on affiche le bouton
         if (flippedCount === compliments.length) {
             finalMessage.style.display = "block";
+            launchConfetti();
         }
     });
 
     // On ajoute la carte dans la grille
     grid.appendChild(card);
 });
+// Lance les confettis quand toutes les cartes sont retournées
+function launchConfetti() {
+    const colors = ["#cc2022","#ff69b4","#ffd700","#ffffff","#ff4444","#ff8e8e"];
+    for (let i = 0; i < 80; i++) {
+        setTimeout(function() {
+            const el = document.createElement("div");
+            el.classList.add("confetti");
+            el.style.left = Math.random() * 100 + "vw";
+            el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            el.style.animationDuration = (Math.random() * 2 + 1.5) + "s";
+            el.style.width = (Math.random() * 8 + 5) + "px";
+            el.style.height = (Math.random() * 8 + 5) + "px";
+            document.body.appendChild(el);
+            // Supprimer après l'animation
+            setTimeout(function() { el.remove(); }, 3500);
+        }, i * 40);
+    }
+}

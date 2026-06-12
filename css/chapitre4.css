@@ -55,3 +55,7 @@ body {
     box-shadow: 0 0 25px rgba(204, 32, 34, 0.8);
     letter-spacing: 2px;
 }
+/* Lueur rouge quand une section apparaît */
+.reveal.visible p {
+    text-shadow: 0 0 20px rgba(204, 32, 34, 0.3);
+}

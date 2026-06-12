@@ -8,7 +8,6 @@ const loveWords = [
     "Milujem ťa", "Szeretlek", "Mimi nakupenda"
 ];
 
-// Génère une couleur aléatoire parmi toutes les couleurs possibles
 function randomColor() {
     const h = Math.floor(Math.random() * 360);
     const s = Math.floor(Math.random() * 40 + 60);
@@ -19,9 +18,11 @@ function randomColor() {
 const container = document.getElementById("words-container");
 const hint = document.getElementById("hint");
 const mainMessage = document.getElementById("main-message");
+const endMessage = document.getElementById("end-message");
 
 let delay = 800;
 let started = false;
+let spawnCount = 0;
 
 function spawnWord() {
     const word = loveWords[Math.floor(Math.random() * loveWords.length)];
@@ -34,6 +35,12 @@ function spawnWord() {
     span.style.fontSize = (Math.random() * 20 + 12) + "px";
 
     container.appendChild(span);
+    spawnCount++;
+
+    // Après 60 mots apparus, on affiche le message final
+    if (spawnCount === 60) {
+        endMessage.classList.add("visible");
+    }
 
     delay = Math.max(50, delay * 0.95);
     setTimeout(spawnWord, delay);
@@ -44,4 +51,4 @@ mainMessage.addEventListener("click", function() {
     started = true;
     hint.style.display = "none";
     spawnWord();
-});   
+});
